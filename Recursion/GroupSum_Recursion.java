@@ -6,7 +6,7 @@
 *  the whole array, our convention is to consider the part of the array starting at index start
 *  and continuing to the end of the array. The caller can specify the whole array simply by passing
 *  start as 0. No loops are needed -- the recursive calls progress down the array.
-
+*
 groupSum(0, [2, 4, 8], 10) → true
 groupSum(0, [2, 4, 8], 14) → true
 groupSum(0, [2, 4, 8], 9) → false
