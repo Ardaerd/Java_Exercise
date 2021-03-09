@@ -17,25 +17,25 @@ public class BankingAccount {
         if (this.balance > transfer) {
             account.balance += transfer;
             this.balance -= transfer;
-            System.out.printf("%s:\nTransfer: -%.2f\nNew Balance: %.2f\nFee: %.2f\n", id, transfer, balance, fee);
+            System.out.printf("%s:\nTransfer: -%.2f$\nNew Balance: %.2f$\nFee: %.2f$\n", id, transfer, balance, fee);
             System.out.println("======================");
-            System.out.printf("%s:\nTransfer: +%.2f\nNew Balance: %.2f\n", account.id, transfer, account.balance);
+            System.out.printf("%s:\nTransfer: +%.2f$\nNew Balance: %.2f$\n", account.id, transfer, account.balance);
             System.out.println("======================");
         } else if (this.balance == 0) {
             System.out.println("I am sorry. You don't have enough money.");
         } else if (this.balance < transfer) {
             account.balance += this.balance;
             this.balance = 0;
-            System.out.printf("%s:\nTransfer: -%.2f\nNew Balance: %.2f\nFee: %.2f\n", id, transfer, balance, fee);
+            System.out.printf("%s:\nTransfer: -%.2f$\nNew Balance: %.2f$\nFee: %.2f$\n", id, transfer, balance, fee);
             System.out.println("======================");
-            System.out.printf("%s:\nTransfer: +%.2f\nNew Balance: %.2f\n", account.id, transfer, account.balance);
+            System.out.printf("%s:\nTransfer: +%.2f$\nNew Balance: %.2f$\n", account.id, transfer, account.balance);
             System.out.println("======================");
         }
     }
 
     public void deposit(double money) {
         balance += money;
-        System.out.printf("%s:\nDeposit: +%.2f\nNew Balance: %.2f\n", id, money, balance);
+        System.out.printf("%s:\nDeposit: +%.2f$\nNew Balance: %.2f$\n", id, money, balance);
         System.out.println("=======================");
     }
 
@@ -45,7 +45,7 @@ public class BankingAccount {
             System.out.println("=======================");
         } else if (money <= balance) {
             balance -= money;
-            System.out.printf("%s:\nWithdraw: -%.2f\nNew Balance: %.2f\n", id, money, balance);
+            System.out.printf("%s:\nWithdraw: -%.2f$\nNew Balance: %.2f$\n", id, money, balance);
             System.out.println("=======================");
         }
         if (balance < 100) {
