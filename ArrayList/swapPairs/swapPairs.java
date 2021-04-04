@@ -19,5 +19,12 @@ public class swapPairs {
         System.out.println(arr);
     }
 
+    public static void swapPairs(ArrayList<String> arr) {
 
+        for (int i = 0; i < arr.size()/2; i++) {
+            String temp = arr.get(2*i+1);
+            arr.set(2*i+1, arr.get(2*i));
+            arr.set(2*i,temp);
+        }
+    }
 }
