@@ -17,6 +17,9 @@ public class swapPairs {
         arr.add("that is the question");
 
         System.out.println(arr);
+
+        swapPairs(arr);
+        System.out.println(arr);
     }
 
     public static void swapPairs(ArrayList<String> arr) {
