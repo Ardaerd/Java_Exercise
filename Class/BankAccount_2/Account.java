@@ -85,4 +85,20 @@ public class Account {
     public String toString() {
         return "Account_" + number + ": " + balance + " " + currency;
     }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public double getExchangeRate() {
+        return exchangeRate;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
 }

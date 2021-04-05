@@ -21,4 +21,12 @@ public class Customer {
         System.out.println("Customer " + this.name + " ");
         this.account.report();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
 }
