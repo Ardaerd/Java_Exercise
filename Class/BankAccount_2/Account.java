@@ -81,6 +81,11 @@ public class Account {
         }
     }
 
+    public void transfer(double amount, String currency) {
+        currency = this.currency;
+        withdraw(amount);
+    }
+
     public void report() {
         System.out.printf("Account_%d:\nBalance: %.2f %s\n",number,balance,currency);
     }

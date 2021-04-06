@@ -28,14 +28,44 @@ public class Main {
         }
         System.out.println("Bye!");
 
-        System.out.println("Do you want to do another transaction?");
-        System.out.println("[Deposit, Withdraw, Transfer]");
-        String transactionType = input.nextLine();
+        while (true) {
+            System.out.println("Do you want to do another transaction? (Empty to quit)");
+            System.out.println("[Deposit, Withdraw, Transfer]");
+            String transactionType = input.nextLine();
+            if (transactionType.equals(""))
+                break;
 
-        if (transactionType.toLowerCase().equals("deposit"))
-            deposit(input,bank);
-        else if (transactionType.toLowerCase().equals("withdraw"))
-            withdraw(input,bank);
+            if (transactionType.toLowerCase().equals("deposit"))
+                deposit(input,bank);
+            else if (transactionType.toLowerCase().equals("withdraw"))
+                withdraw(input,bank);
+            else if (transactionType.toLowerCase().equals("transfer"))
+                transfer(input,bank);
+        }
+        System.out.println("Bye!");
+    }
+
+    public static void transfer(Scanner input, Bank bank) {
+        while (true) {
+            System.out.print("Which account wants to transfer (Enter accountNo): ");
+            int sender = input.nextInt();
+            input.nextLine();
+
+            System.out.print("To which account the transfer is wanted (Enter accountNo): ");
+            int receiver = input.nextInt();
+            input.nextLine();
+
+            System.out.println("Enter the amount you want to transfer: ");
+            double amount = Double.parseDouble(input.nextLine());
+
+            bank.getCustomers().get(sender).withdraw(amount);
+            bank.getCustomers().get(receiver).deposit(amount,bank.getCustomers().get(sender).getAccount().getCurrency());
+
+            System.out.print("Do you want to do another transfer (Empty to quit): ");
+            String answer = input.nextLine();
+            if (answer.equals(""))
+                break;
+        }
     }
 
     public static void withdraw(Scanner input, Bank bank) {
@@ -58,10 +88,8 @@ public class Main {
     }
 
     public static void deposit(Scanner input, Bank bank) {
-        System.out.print("Would you like to deposit money into any account(Y/N): ");
-        String deposit = input.nextLine();
 
-        while (deposit.toLowerCase().equals("yes")) {
+        while (true) {
             System.out.print("Enter the account_no: ");
             int accountNo = input.nextInt();
             input.nextLine();
@@ -74,8 +102,8 @@ public class Main {
             bank.getCustomers().get(accountNo).deposit(amount,currency);
 
             System.out.print("Do you want to make another deposit(Y/N) (Empty to quit): ");
-            deposit = input.nextLine();
-            if (deposit.equals("") || deposit.toLowerCase().equals("no"))
+            String answer = input.nextLine();
+            if (answer.equals("") || answer.toLowerCase().equals("no"))
                 break;
         }
         System.out.println("Bye!");
