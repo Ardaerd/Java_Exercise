@@ -28,11 +28,33 @@ public class Main {
         }
         System.out.println("Bye!");
 
-        deposit(input,bank);
+        System.out.println("Do you want to do another transaction?");
+        System.out.println("[Deposit, Withdraw, Transfer]");
+        String transactionType = input.nextLine();
+
+        if (transactionType.toLowerCase().equals("deposit"))
+            deposit(input,bank);
+        else if (transactionType.toLowerCase().equals("withdraw"))
+            withdraw(input,bank);
     }
 
     public static void withdraw(Scanner input, Bank bank) {
-        
+        while (true) {
+            System.out.print("Enter the account_no: ");
+            int accountNo = input.nextInt();
+            input.nextLine();
+
+            System.out.print("Enter the amount you want to withdraw: ");
+            double amount = Double.parseDouble(input.nextLine());
+
+            bank.getCustomers().get(accountNo).withdraw(amount);
+
+            System.out.print("Do you want to make another withdraw (Empty to quit): ");
+            String withdraw = input.nextLine();
+            if (withdraw.equals(""))
+                break;
+        }
+        System.out.println("Bye!");
     }
 
     public static void deposit(Scanner input, Bank bank) {

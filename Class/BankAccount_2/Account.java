@@ -71,8 +71,10 @@ public class Account {
                 System.out.println("Account does not have " + amount + " " + currency);
             else {
                 balance -= amount;
+                System.out.println("-------------------------------------------");
                 System.out.println(amount + " " + currency + " have been withdrawn.");
                 System.out.println("The balance is " + balance + " " + currency);
+                System.out.println("-------------------------------------------");
             }
         } else {
             System.out.println("The amount should be positive.");
