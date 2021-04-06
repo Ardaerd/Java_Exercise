@@ -42,6 +42,7 @@ public class Main {
             else if (transactionType.toLowerCase().equals("transfer"))
                 transfer(input,bank);
         }
+        bank.display();
         System.out.println("Bye!");
     }
 
