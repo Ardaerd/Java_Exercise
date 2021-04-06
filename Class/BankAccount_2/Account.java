@@ -57,8 +57,10 @@ public class Account {
                balance += (amount/exchangeRate);
            else if (this.currency.equals("TL") && currency.equals("USD"))
                balance += (amount*exchangeRate);
+           System.out.println("-------------------------------------------");
            System.out.println(amount + " " + currency + " have been deposited.");
            System.out.println("The balance is " + balance + " " + this.currency);
+           System.out.println("-------------------------------------------");
        } else
            System.out.println("The amount should be positive.");
     }
@@ -78,8 +80,7 @@ public class Account {
     }
 
     public void report() {
-        System.out.println("Account_" + number + ":\n" +
-                "Balance: " + balance + " " + currency);
+        System.out.printf("Account_%d:\nBalance: %.2f %s\n",number,balance,currency);
     }
 
     public String toString() {
