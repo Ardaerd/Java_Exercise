@@ -18,8 +18,14 @@ public class Stock {
         this(symbol,0,0.0);
     }
 
+    // Returns the total profit or loss earned on this stock,
+    // based on the given price per share
     public double getProfit(double currentPrice) {
-        return (currentPrice * totalShares) - totalCost;
+        if (currentPrice < 0.0)
+            throw new IllegalArgumentException();
+
+        double marketValue = currentPrice * totalShares;
+        return marketValue - totalCost;
     }
 
     // Record a purchase of the given number of shares of this stock
