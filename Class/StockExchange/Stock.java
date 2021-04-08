@@ -19,12 +19,15 @@ public class Stock {
     }
 
     public double getProfit(double currentPrice) {
-        return (currentPrice - totalCost) * totalShares;
+        return (currentPrice * totalShares) - totalCost;
     }
 
     // Record a purchase of the given number of shares of this stock
     // at the given price per share
     public void purchase(int shares, double pricePerShare) {
+        if (shares < 0 || pricePerShare < 0)
+            throw new IllegalArgumentException();
+
         totalShares += shares;
         totalCost += pricePerShare * shares;
     }
