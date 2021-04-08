@@ -37,4 +37,16 @@ public class Stock {
         totalShares += shares;
         totalCost += pricePerShare * shares;
     }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public int getTotalShares() {
+        return totalShares;
+    }
+
+    public double getTotalCost() {
+        return totalCost;
+    }
 }

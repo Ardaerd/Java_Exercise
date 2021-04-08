@@ -40,8 +40,11 @@ public class Main {
 
         // ask about each purchases
         for (int i = 1; i <= numPurchases; i++) {
-            System.out.print(i + ": How many shares, at what price per share: ");
+            System.out.println(i + ": How many shares, at what price per share: ");
+            System.out.print("Number of shares: ");
             int numShares = console.nextInt();
+            console.nextLine();
+            System.out.print("Price per share: ");
             double pricePerShare = console.nextDouble();
             console.nextLine();
 
@@ -56,6 +59,8 @@ public class Main {
 
         double profit = currentStock.getProfit(currentPrice);
         System.out.printf("Net profit/loss: $%.2f\n", profit);
+        System.out.printf("Profit margin is %.2f%%\n",
+                (currentStock.getProfit(currentPrice)/currentStock.getTotalCost())*100);
         System.out.println("--------------------------");
         return profit;
     }
