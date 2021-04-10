@@ -21,5 +21,22 @@ public class Main {
         System.out.println(secretary.getVacationForm());
         secretary.takeDictation("hello");
 
+        System.out.print("Lawyer: ");
+        Lawyer lawyer = new Lawyer();
+        System.out.print(lawyer.getHours() + ", ");
+        System.out.printf("$%.2f, ", lawyer.getSalary());
+        System.out.print(lawyer.getVacationDays() + ", ");
+        System.out.println(lawyer.getVacationForm());
+        lawyer.sue();
+
+        System.out.print("Legal Secretary: ");
+        LegalSecretary legalSecretary = new LegalSecretary();
+        System.out.print(legalSecretary.getHours() + ", ");
+        System.out.printf("$%.2f, ", legalSecretary.getSalary());
+        System.out.print(legalSecretary.getVacationDays() + ", ");
+        System.out.println(legalSecretary.getVacationForm());
+        legalSecretary.takeDictation("neato");
+        legalSecretary.fileLegalBriefs();
+
     }
 }
