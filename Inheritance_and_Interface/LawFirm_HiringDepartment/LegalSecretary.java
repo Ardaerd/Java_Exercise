@@ -4,7 +4,7 @@ package Inheritance_and_Interface.LawFirm_HiringDepartment;
 public class LegalSecretary extends Secretary {
     // Overrides getSalary from Employee class
     public double getSalary() {
-        return 45000.0;
+        return super.getSalary() + 5000; // $5k more then general employees
     }
 
     // new behaviour of LegalSecretary Objects
