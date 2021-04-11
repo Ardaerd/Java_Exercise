@@ -18,7 +18,7 @@ public class Stock {
     }
 
     // Returns the total profit or loss earned on this stock
-    public double profit(double currentPrice) {
+    public double getProfit(double currentPrice) {
         double marketValue = totalShares * currentPrice;
         return marketValue - totalCost;
     }
@@ -26,5 +26,17 @@ public class Stock {
     public void purchase(int shares, double pricePerShares) {
         totalShares += shares;
         totalCost += shares * pricePerShares;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public int getTotalShares() {
+        return totalShares;
+    }
+
+    public double getTotalCost() {
+        return totalCost;
     }
 }
