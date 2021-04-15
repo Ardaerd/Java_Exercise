@@ -7,7 +7,7 @@ public class Feline extends Animal{
     }
 
     public String roam() {
-        return super.getName() + " tend to avoid others of their own kind.\n";
+        return super.getName() + " tend to avoid others of their own kind.";
     }
 
     public String toString() {
