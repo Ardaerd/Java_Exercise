@@ -20,7 +20,7 @@ public class Main {
         art4.addAuthor(Reyyan);
         art4.addAuthor(Furkan);
         art4.addAuthor(Melih);
-        
+
         art1.listAuthors();
         art1.getAuthorsPublicationCounts();
     }

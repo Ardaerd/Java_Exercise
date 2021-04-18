@@ -11,7 +11,19 @@ public class Author {
         listOfArticle = new ArrayList<Article>();
     }
 
+    public void setNameOfAuthor(String nameOfAuthor) {
+        this.nameOfAuthor = nameOfAuthor;
+    }
+
+    public void addListOfArticle(Article article) {
+        listOfArticle.add(article);
+    }
+
     public String getNameOfAuthor() {
         return nameOfAuthor;
+    }
+
+    public ArrayList<Article> getListOfArticle() {
+        return listOfArticle;
     }
 }

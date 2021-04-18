@@ -15,6 +15,7 @@ public class Article {
 
     public void addAuthor(Author author) {
         listOfAuthor.add(author);
+        author.addListOfArticle(this);
     }
 
     public void listAuthors() {
@@ -26,7 +27,13 @@ public class Article {
     }
 
     public void getAuthorsPublicationCounts() {
-        System.out.println("Authors' Publication Counts: " + listOfAuthor.size());
-        System.out.println("---------------------------------");
+        int count = 0;
+
+        for (int i = 0; i < listOfAuthor.size(); i++) {
+            count += listOfAuthor.get(i).getListOfArticle().size();
+        }
+
+        System.out.println("Authors' Publication Counts: " + count);
+        System.out.println("----------------------------------");
     }
 }
