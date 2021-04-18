@@ -31,5 +31,7 @@ public class Main {
         Furkan.listArticlesAfter(2015);
 
         Reyyan.articlesCoAuthored(Furkan);
+        Furkan.articlesCoAuthored(Melih);
+        Reyyan.articlesCoAuthored(Melih);
     }
 }
