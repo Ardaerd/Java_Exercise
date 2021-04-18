@@ -19,6 +19,16 @@ public class Author {
         listOfArticle.add(article);
     }
 
+    public void listArticlesAfter(int year) {
+        System.out.println("Publications of " + nameOfAuthor + " after " + year + ":");
+
+        for (int i = 0; i < listOfArticle.size(); i++) {
+            if (listOfArticle.get(i).getPublicationYear() >= year)
+                System.out.println(listOfArticle.get(i).getNameOfArticle() +
+                        " (" + listOfArticle.get(i).getPublicationYear() + ")");
+        }
+    }
+
     public String getNameOfAuthor() {
         return nameOfAuthor;
     }

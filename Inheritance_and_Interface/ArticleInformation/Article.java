@@ -36,4 +36,28 @@ public class Article {
         System.out.println("Authors' Publication Counts: " + count);
         System.out.println("----------------------------------");
     }
+
+    public void setNameOfArticle(String nameOfArticle) {
+        this.nameOfArticle = nameOfArticle;
+    }
+
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+
+    public void setListOfAuthor(ArrayList<Author> listOfAuthor) {
+        this.listOfAuthor = listOfAuthor;
+    }
+
+    public String getNameOfArticle() {
+        return nameOfArticle;
+    }
+
+    public int getPublicationYear() {
+        return publicationYear;
+    }
+
+    public ArrayList<Author> getListOfAuthor() {
+        return listOfAuthor;
+    }
 }

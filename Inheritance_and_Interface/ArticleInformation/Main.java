@@ -22,6 +22,14 @@ public class Main {
         art4.addAuthor(Melih);
 
         art1.listAuthors();
+        art4.listAuthors();
+
         art1.getAuthorsPublicationCounts();
+        art4.getAuthorsPublicationCounts();
+
+        Reyyan.listArticlesAfter(2015);
+        Furkan.listArticlesAfter(2015);
+
+        
     }
 }
