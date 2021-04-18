@@ -30,6 +30,6 @@ public class Main {
         Reyyan.listArticlesAfter(2015);
         Furkan.listArticlesAfter(2015);
 
-        
+        Reyyan.articlesCoAuthored(Furkan);
     }
 }

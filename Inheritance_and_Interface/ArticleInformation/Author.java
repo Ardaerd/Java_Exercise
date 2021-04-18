@@ -27,6 +27,21 @@ public class Author {
                 System.out.println(listOfArticle.get(i).getNameOfArticle() +
                         " (" + listOfArticle.get(i).getPublicationYear() + ")");
         }
+        System.out.println("----------------------------------------------");
+    }
+
+    public void articlesCoAuthored(Author author) {
+        System.out.println("Publication of " + nameOfAuthor + " and " + author.getNameOfAuthor() + " together:");
+
+        for (int i = 0; i < author.listOfArticle.size(); i++) {
+            for (int j = 0; j < this.listOfArticle.size(); j++) {
+
+                if (author.listOfArticle.get(i).getNameOfArticle().equals(this.listOfArticle.get(j).getNameOfArticle()))
+                    System.out.println(this.listOfArticle.get(j).getNameOfArticle() +
+                            " (" + this.listOfArticle.get(j).getPublicationYear() + ")");
+            }
+        }
+        System.out.println("----------------------------------------------");
     }
 
     public String getNameOfAuthor() {
