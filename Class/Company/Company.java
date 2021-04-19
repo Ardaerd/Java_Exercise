@@ -15,5 +15,5 @@ public class Company {
         departments.add(department);
     }
 
-    
+
 }
