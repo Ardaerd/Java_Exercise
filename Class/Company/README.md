@@ -1,0 +1,3 @@
+<h2>Company Hiring Department</h2>
+<h4>Explanation: </h4>
+<p>This project about hiring employee for some department. You need 4 class. First one is Company class for general staff and also this class need to store Department classes. Second, Department class for adding staff and also this class need to store Employee classes. Third, Employee class this class contain all information about employee. Fourth class is a main class. </p>
