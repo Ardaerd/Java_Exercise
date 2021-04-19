@@ -22,6 +22,23 @@ public class Employee {
 
     public String toString() {
         return "Name: " + name + "\n" +
-                "Salary: " + salary + "\n";
+                "Salary: " + salary + "\n" +
+                "---------------\n";
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public boolean isSupervisor() {
+        return supervisor;
     }
 }

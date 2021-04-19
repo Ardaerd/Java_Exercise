@@ -22,9 +22,12 @@ public class Department {
     public String toString() {
         String report = "";
         for (int i = 0; i < staff.size(); i++) {
-            report += staff.get(i).toString() + "\n";
+            report += staff.get(i).toString();
         }
-        return "Department: " + name + "\n"
+        return "======================\n" +
+                "Department: " + name + "\n" +
+                "Supervisor: " + supervisor.getName() + "\n" +
+                "------------------\n"
                 + report;
     }
 

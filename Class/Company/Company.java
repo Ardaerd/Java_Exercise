@@ -20,7 +20,12 @@ public class Company {
     }
 
     public String toString() {
-        return "Company: " + name + "\n";
+        String report = "";
+        for (int i = 0; i < departments.size(); i++) {
+            report += departments.get(i).toString();
+        }
+        return "Company: " + name + "\n" +
+                report;
     }
 
 }
