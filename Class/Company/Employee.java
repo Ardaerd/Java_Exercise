@@ -19,4 +19,9 @@ public class Employee {
     public void setSupervisor(boolean supervisor) {
         this.supervisor = supervisor;
     }
+
+    public String toString() {
+        return "Name: " + name + "\n" +
+                "Salary: " + salary + "\n";
+    }
 }

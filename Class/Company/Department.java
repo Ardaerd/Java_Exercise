@@ -18,4 +18,14 @@ public class Department {
         staff.add(employee);
         employee.setDepartment(this);
     }
+
+    public String toString() {
+        String report = "";
+        for (int i = 0; i < staff.size(); i++) {
+            report += staff.get(i).toString() + "\n";
+        }
+        return "Department: " + name + "\n"
+                + report;
+    }
+
 }

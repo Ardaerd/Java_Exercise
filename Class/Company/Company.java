@@ -15,5 +15,12 @@ public class Company {
         departments.add(department);
     }
 
+    public void addStaff(Employee employee, Department department) {
+        department.addStaff(employee);
+    }
+
+    public String toString() {
+        return "Company: " + name + "\n";
+    }
 
 }
