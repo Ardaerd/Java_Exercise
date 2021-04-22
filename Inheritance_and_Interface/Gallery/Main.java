@@ -20,7 +20,19 @@ public class Main {
         Model_X.arrivalTime(500);
         Model_s.arrivalTime(500);
 
-        Gallery gallery = new Gallery("AutoNation");
+        Gallery gallery_1 = new Gallery("AutoNation");
+
+        gallery_1.addVehicles(Model_3);
+        gallery_1.addVehicles(Model_s);
+        gallery_1.addVehicles(Model_X);
+
+        gallery_1.listOfOption();
+
+        Customer customer_1 = new Customer("Arda Erdoğan", 500_000.00);
+        Customer customer_2 = new Customer("Ekin Akan",1_000_000.00);
+        Customer customer_3 = new Customer("Elon Musk",50_000.00);
+
+        
 
     }
 

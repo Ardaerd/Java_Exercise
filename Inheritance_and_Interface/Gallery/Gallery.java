@@ -27,7 +27,7 @@ public class Gallery {
     }
 
     public void listOfOption() {
-        System.out.println("------ Welcome to " + name + " ------");
+        System.out.println("-------- Welcome to " + name + " --------");
         for (int i = 0; i < vehicles.size(); i++) {
             System.out.println(1+i + "- " + vehicles.get(i).getModel() + " (" + vehicles.get(i).getBrand() + ")");
         }
