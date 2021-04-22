@@ -1,6 +1,8 @@
 package Inheritance_and_Interface.Gallery;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Gallery {
 
@@ -34,9 +36,21 @@ public class Gallery {
 
     public void listOfCustomer() {
         System.out.println("------- List of Customer -------");
-        for (int i = 0; i < customers.size(); i++) {
 
+        for (int i = 0; i < customers.size()-1; i++) {
+            for (int j = 0; j < customers.size()-1-i; j++) {
+                if (customers.get(j).getSpending() < customers.get(j+1).getSpending()) {
+                    Customer temp = customers.get(j+1);
+                    customers.set(i,customers.get(j));
+                    customers.set(j+1,temp);
+                }
+            }
         }
+
+        for (int i = 0; i < customers.size(); i++) {
+            System.out.println(i+1 + "- " + customers.get(i).getName() + " (" + customers.get(i).getSpending() + ")");
+        }
+        System.out.println("---------------------------------------");
     }
 
     public void listOfSoldVehicles() {
