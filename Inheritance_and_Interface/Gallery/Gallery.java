@@ -32,10 +32,19 @@ public class Gallery {
         System.out.println("---------------------------------------");
     }
 
+    public void listOfCustomer() {
+        System.out.println("------- List of Customer -------");
+        for (int i = 0; i < customers.size(); i++) {
+
+        }
+    }
+
     public void listOfSoldVehicles() {
+        System.out.println("------- List of Sold Vehicle -------");
         for (int i = 0; i < soldVehicles.size(); i++) {
             System.out.println(1+i + "- " + soldVehicles.get(i).getModel() + " (" + customers.get(i).getName() + ")");
         }
+        System.out.println("---------------------------------------");
     }
 
     public void sold(int option, Customer customer) {
