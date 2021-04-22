@@ -9,6 +9,7 @@ public class Gallery {
     private int numberOfSale;
     private ArrayList<Vehicle> vehicles;
     private ArrayList<Vehicle> soldVehicles;
+    private ArrayList<Customer> customers;
 
     public Gallery(String name) {
         this.name = name;
@@ -16,6 +17,7 @@ public class Gallery {
         this.numberOfSale = 0;
         vehicles = new ArrayList<Vehicle>();
         soldVehicles = new ArrayList<Vehicle>();
+        customers = new ArrayList<Customer>();
     }
 
     public void addVehicles(Vehicle vehicle) {
@@ -30,10 +32,29 @@ public class Gallery {
         System.out.println("---------------------------------------");
     }
 
-    public void sales(int option) {
-        revenue += vehicles.get(option-1).getPrice();
-        numberOfSale++;
-        soldVehicles.add(vehicles.get(option-1));
-        System.out.println(vehicles.get(option-1).getModel() " is sold.");
+    public void listOfSoldVehicles() {
+        for (int i = 0; i < soldVehicles.size(); i++) {
+            System.out.println(1+i + "- " + soldVehicles.get(i).getModel() + " (" + customers.get(i).getName() + ")");
+        }
+    }
+
+    public void sold(int option, Customer customer) {
+        if (customer.buy(vehicles.get(option-1))) {
+            revenue += vehicles.get(option-1).getPrice();
+            numberOfSale++;
+            soldVehicles.add(vehicles.get(option-1));
+            customers.add(customer);
+            System.out.println(vehicles.get(option-1).getModel() + " is sold.\n" +
+                    "Good luck with your new car Mr/Mrs. " + customer.getName() + "\n" +
+                    "Sold: +" + vehicles.get(option-1).getPrice());
+        } else {
+            System.out.println("The sale could not be realized.");
+        }
+    }
+
+    public String toString() {
+        return "Dealer name: " + name + "\n" +
+                "Revenue: $ " + revenue + "\n" +
+                "Number of Sales: " + numberOfSale + "\n";
     }
 }
