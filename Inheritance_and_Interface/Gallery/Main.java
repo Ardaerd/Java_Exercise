@@ -33,6 +33,11 @@ public class Main {
         Customer customer_3 = new Customer("Elon Musk",50_000.00);
 
         gallery_1.sold(2,customer_1);
+        gallery_1.sold(3,customer_2);
+        gallery_1.sold(1,customer_3);
+        gallery_1.sold(2,customer_3);
+
+        gallery_1.listOfCustomer();
 
     }
 

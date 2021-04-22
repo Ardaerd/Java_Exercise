@@ -40,15 +40,15 @@ public class Gallery {
         for (int i = 0; i < customers.size()-1; i++) {
             for (int j = 0; j < customers.size()-1-i; j++) {
                 if (customers.get(j).getSpending() < customers.get(j+1).getSpending()) {
-                    Customer temp = customers.get(j+1);
-                    customers.set(i,customers.get(j));
+                    Customer temp = customers.get(j);
+                    customers.set(j,customers.get(j+1));
                     customers.set(j+1,temp);
                 }
             }
         }
 
         for (int i = 0; i < customers.size(); i++) {
-            System.out.println(i+1 + "- " + customers.get(i).getName() + " (" + customers.get(i).getSpending() + ")");
+            System.out.println(i+1 + "- " + customers.get(i).getName() + " ($" + customers.get(i).getSpending() + ")");
         }
         System.out.println("---------------------------------------");
     }
@@ -69,7 +69,8 @@ public class Gallery {
             customers.add(customer);
             System.out.println(vehicles.get(option-1).getModel() + " is sold.\n" +
                     "Good luck with your new car Mr/Mrs. " + customer.getName() + "\n" +
-                    "Sold: +$" + vehicles.get(option-1).getPrice());
+                    "Sold: + $" + vehicles.get(option-1).getPrice());
+            System.out.println("---------------------------------------");
         } else {
             System.out.println("The sale could not be realized.");
         }

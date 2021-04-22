@@ -23,7 +23,7 @@ public class Customer {
             spending += vehicle.getPrice();
             return true;
         } else {
-            System.out.println("You don't have enough money!!!");
+            System.out.println(name + " doesn't have enough money!!!");
             return false;
         }
     }
