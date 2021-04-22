@@ -16,7 +16,7 @@ public class Vehicle {
     public String toString() {
         return "Brand: " + brand + "\n" +
                 "Model: " + model + "\n" +
-                "Price: " + price + "\n" +
+                "Price: $" + price + "\n" +
                 "Year: " + year + "\n";
     }
 

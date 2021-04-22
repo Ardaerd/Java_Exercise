@@ -6,8 +6,8 @@ public class Tesla extends Car {
 
     private boolean autoPilot;
 
-    public Tesla(double price, double topSpeed, double acceleration,int year, String model, String fuelType) {
-        super(price,topSpeed,acceleration,year,model,"Tesla","Electric");
+    public Tesla(double price, double topSpeed, double acceleration,int year, String model,String color) {
+        super(price,topSpeed,acceleration,year,model,"Tesla","Electric", color);
         this.autoPilot = true;
     }
 
