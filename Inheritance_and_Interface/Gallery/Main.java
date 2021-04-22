@@ -28,16 +28,27 @@ public class Main {
 
         gallery_1.listOfOption();
 
-        Customer customer_1 = new Customer("Arda Erdoğan", 500_000.00);
-        Customer customer_2 = new Customer("Ekin Akan",1_000_000.00);
-        Customer customer_3 = new Customer("Elon Musk",50_000.00);
+        Customer customer_1 = new Customer("Arda Erdoğan", 500_000.00, gallery_1);
+        Customer customer_2 = new Customer("Ekin Akan",1_000_000.00, gallery_1);
+        Customer customer_3 = new Customer("Elon Musk",50_000.00, gallery_1);
 
         gallery_1.sold(2,customer_1);
         gallery_1.sold(3,customer_2);
         gallery_1.sold(1,customer_3);
         gallery_1.sold(2,customer_3);
+        gallery_1.sold(1,customer_1);
+        gallery_1.sold(2,customer_2);
+        gallery_1.sold(3,customer_1);
 
         gallery_1.listOfCustomer();
+        gallery_1.listOfOption();
+        gallery_1.listOfSoldVehicles();
+
+        System.out.println(gallery_1);
+
+        System.out.println(customer_1);
+        System.out.println(customer_2);
+        System.out.println(customer_3);
 
     }
 

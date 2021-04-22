@@ -8,12 +8,16 @@ public class Customer {
     private double money;
     private double spending;
     private ArrayList<Vehicle> myCars;
+    private Gallery gallery;
 
-    public Customer(String name, double money) {
+    public Customer(String name, double money, Gallery gallery) {
         this.name = name;
         this.money = money;
         this.spending = 0;
+        this.gallery = gallery;
+        gallery.addCustomers(this);
         myCars = new ArrayList<Vehicle>();
+
     }
 
     public boolean buy(Vehicle vehicle) {
@@ -28,9 +32,16 @@ public class Customer {
         }
     }
 
+    public void listOfSoldVehicle() {
+        for (int i = 0; i < myCars.size(); i++) {
+            System.out.print("- " + myCars.get(i).getModel() + " " + "($" + myCars.get(i).getPrice() + ")\n");
+        }
+    }
+
     public String toString() {
         return "Name: " + name + "\n" +
-                "Money" + money + "\n";
+                "Money: $" + money + "\n" +
+                "----------------";
     }
 
     public void setName(String name) {

@@ -10,7 +10,6 @@ public class Gallery {
     private String name;
     private int numberOfSale;
     private ArrayList<Vehicle> vehicles;
-    private ArrayList<Vehicle> soldVehicles;
     private ArrayList<Customer> customers;
 
     public Gallery(String name) {
@@ -18,12 +17,15 @@ public class Gallery {
         this.revenue = 0;
         this.numberOfSale = 0;
         vehicles = new ArrayList<Vehicle>();
-        soldVehicles = new ArrayList<Vehicle>();
         customers = new ArrayList<Customer>();
     }
 
     public void addVehicles(Vehicle vehicle) {
         vehicles.add(vehicle);
+    }
+
+    public void addCustomers(Customer customer) {
+        customers.add(customer);
     }
 
     public void listOfOption() {
@@ -43,6 +45,7 @@ public class Gallery {
                     Customer temp = customers.get(j);
                     customers.set(j,customers.get(j+1));
                     customers.set(j+1,temp);
+
                 }
             }
         }
@@ -54,9 +57,9 @@ public class Gallery {
     }
 
     public void listOfSoldVehicles() {
-        System.out.println("------- List of Sold Vehicle -------");
-        for (int i = 0; i < soldVehicles.size(); i++) {
-            System.out.println(1+i + "- " + soldVehicles.get(i).getModel() + " (" + customers.get(i).getName() + ")");
+        System.out.println("--------- List of Sold Vehicle ---------");
+        for (int i = 0; i < customers.size(); i++) {
+            customers.get(i).listOfSoldVehicle();
         }
         System.out.println("---------------------------------------");
     }
@@ -65,14 +68,13 @@ public class Gallery {
         if (customer.buy(vehicles.get(option-1))) {
             revenue += vehicles.get(option-1).getPrice();
             numberOfSale++;
-            soldVehicles.add(vehicles.get(option-1));
-            customers.add(customer);
             System.out.println(vehicles.get(option-1).getModel() + " is sold.\n" +
                     "Good luck with your new car Mr/Mrs. " + customer.getName() + "\n" +
                     "Sold: + $" + vehicles.get(option-1).getPrice());
             System.out.println("---------------------------------------");
         } else {
             System.out.println("The sale could not be realized.");
+            System.out.println("---------------------------------------");
         }
     }
 
