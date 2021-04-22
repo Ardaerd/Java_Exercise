@@ -1,5 +1,7 @@
 package Inheritance_and_Interface.ArticleInformation;
 
+import Inheritance_and_Interface.ArticleInformation.Author;
+
 import java.util.ArrayList;
 
 public class Article {
