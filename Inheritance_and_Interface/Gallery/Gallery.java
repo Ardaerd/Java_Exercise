@@ -69,7 +69,7 @@ public class Gallery {
             customers.add(customer);
             System.out.println(vehicles.get(option-1).getModel() + " is sold.\n" +
                     "Good luck with your new car Mr/Mrs. " + customer.getName() + "\n" +
-                    "Sold: +" + vehicles.get(option-1).getPrice());
+                    "Sold: +$" + vehicles.get(option-1).getPrice());
         } else {
             System.out.println("The sale could not be realized.");
         }

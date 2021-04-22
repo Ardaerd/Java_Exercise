@@ -32,7 +32,7 @@ public class Main {
         Customer customer_2 = new Customer("Ekin Akan",1_000_000.00);
         Customer customer_3 = new Customer("Elon Musk",50_000.00);
 
-        
+        gallery_1.sold(2,customer_1);
 
     }
 
