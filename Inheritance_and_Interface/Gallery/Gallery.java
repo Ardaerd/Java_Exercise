@@ -6,12 +6,16 @@ public class Gallery {
 
     private double revenue;
     private String name;
+    private int numberOfSale;
     private ArrayList<Vehicle> vehicles;
+    private ArrayList<Vehicle> soldVehicles;
 
-    public Gallery(String name, double revenue) {
+    public Gallery(String name) {
         this.name = name;
-        this.revenue = revenue;
+        this.revenue = 0;
+        this.numberOfSale = 0;
         vehicles = new ArrayList<Vehicle>();
+        soldVehicles = new ArrayList<Vehicle>();
     }
 
     public void addVehicles(Vehicle vehicle) {
@@ -26,7 +30,10 @@ public class Gallery {
         System.out.println("---------------------------------------");
     }
 
-    public void selling(int option) {
+    public void sales(int option) {
         revenue += vehicles.get(option-1).getPrice();
+        numberOfSale++;
+        soldVehicles.add(vehicles.get(option-1));
+        System.out.println(vehicles.get(option-1).getModel() " is sold.");
     }
 }
