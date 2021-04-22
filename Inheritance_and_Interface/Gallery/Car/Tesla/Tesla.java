@@ -13,7 +13,7 @@ public class Tesla extends Car {
 
     public String checkAutoPlot() {
         if (autoPilot)
-            return "Basic Autopilot";
+            return "Standard Autopilot";
         else
             return "Invalid feature";
     }

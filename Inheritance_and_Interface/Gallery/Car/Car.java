@@ -18,8 +18,9 @@ public class Car extends Vehicle {
     }
 
     public void arrivalTime(double km) {
+        System.out.println("----------------------- " + super.getModel() + " -----------------------");
         System.out.println("You can go " + km + " km in " + topSpeed/km + " hours with " + getBrand() + ", " +
-                getModel() + ".");
+                getModel() + ".\n");
     }
 
     public String toString() {

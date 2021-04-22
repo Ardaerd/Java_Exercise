@@ -14,6 +14,7 @@ public class Vehicle {
     }
 
     public String toString() {
+        System.out.println("---------- " + model + " ----------");
         return "Brand: " + brand + "\n" +
                 "Model: " + model + "\n" +
                 "Price: $" + price + "\n" +
