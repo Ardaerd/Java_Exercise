@@ -7,8 +7,14 @@ public class Faculty extends Employee {
 
     private String nameOfFaculty;
 
+    public Faculty(String nameOfEmployee, String status, University university, String nameOfFaculty) {
+        super(nameOfEmployee, status, university);
+        super.setSalary(8_000.00);
+        this.nameOfFaculty = nameOfFaculty;
+    }
 
-    public Faculty(String nameOfEmployee, double salary, University university) {
-        super(nameOfEmployee, salary, university);
+    public String toString() {
+        return super.toString() +
+                super.getNameOfEmployee() + "'s Faculty: " + nameOfFaculty;
     }
 }

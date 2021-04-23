@@ -3,18 +3,23 @@ package Inheritance_and_Interface.University;
 public class Employee {
 
     private String nameOfEmployee;
+    private String status;
     private double salary;
     private University university;
 
-    public Employee(String nameOfEmployee, University university) {
+    public Employee(String nameOfEmployee, String status, University university) {
         this.nameOfEmployee = nameOfEmployee;
+        this.status = status;
         this.salary = 2_825.00;
         university.addEmployee(this);
     }
 
     public String toString() {
         return "------------" + university.getNameOfUniversity() + "------------\n" +
-                "Rector: " + university.getRector() + "\n";
+                "Rector: " + university.getRector() + "\n" +
+                "Name of Employee: " + nameOfEmployee + "\n" +
+                "Status of " + nameOfEmployee + ": " + status + "\n" +
+                "Salary of " + nameOfEmployee + ": " + salary + "\n";
     }
 
     public void setNameOfEmployee(String nameOfEmployee) {

@@ -23,8 +23,9 @@ public class University {
     }
 
     public void listOfEmployee() {
+        System.out.println("------------ List of Employee ------------");
         for (int i = 0; i < employees.size(); i++) {
-            System.out.println();
+            System.out.println(i+1 + "- " + employees.get(i).getNameOfEmployee());
         }
     }
 
