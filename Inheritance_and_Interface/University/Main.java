@@ -134,6 +134,17 @@ public class Main {
 
         ozu.listOfStudent();
         System.out.println(ozu);
+
+        //--------------------------------------- Graduated Class ---------------------------------------------//
+
+        Graduated Elon = new Graduated("Elon Musk","Computer Science","Co-Founder of Tesla","LA",32,ozu);
+        Graduated Bill = new Graduated("Bill Gates","Computer Science","Co-Founder of Microsoft","LA",55,ozu);
+
+        System.out.println(Elon);
+        System.out.println(Bill);
+
+        ozu.listOfGraduates();
+        System.out.println(ozu);
     }
 
 }

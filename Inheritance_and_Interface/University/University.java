@@ -8,14 +8,26 @@ public class University {
     private String rector;
     private ArrayList<Employee> employees;
     private ArrayList<Student> students;
-    private ArrayList<Graduate> graduates;
+    private ArrayList<Graduated> graduates;
 
     public University(String nameOfUniversity, String rector) {
         this.nameOfUniversity = nameOfUniversity;
         this.rector = rector;
         employees = new ArrayList<Employee>();
         students = new ArrayList<Student>();
-        graduates = new ArrayList<Graduate>();
+        graduates = new ArrayList<Graduated>();
+    }
+
+    public void addGraduates(Graduated graduated) {
+        graduates.add(graduated);
+    }
+
+    public void listOfGraduates() {
+        System.out.println("------------ List of Graduates ------------");
+        for (int i = 0; i < graduates.size(); i++) {
+            System.out.println(i+1 + "- " + graduates.get(i).getName() + " (" + graduates.get(i).getJob() + ")");
+        }
+        System.out.println("---------------------------------------");
     }
 
     public void addStudent(Student student) {
@@ -45,7 +57,8 @@ public class University {
     public String toString() {
         return "Welcome to " + nameOfUniversity + "\n" +
                 "Total Number of Employees: " + employees.size() + "\n" +
-                "Total Number of Students: " + students.size();
+                "Total Number of Students: " + students.size() + "\n" +
+                "Total Number of Graduates: " + graduates.size();
     }
 
     public void setNameOfUniversity(String nameOfUniversity) {
@@ -64,7 +77,7 @@ public class University {
         this.students = students;
     }
 
-    public void setGraduates(ArrayList<Graduate> graduates) {
+    public void setGraduates(ArrayList<Graduated> graduates) {
         this.graduates = graduates;
     }
 
@@ -84,7 +97,7 @@ public class University {
         return students;
     }
 
-    public ArrayList<Graduate> getGraduates() {
+    public ArrayList<Graduated> getGraduates() {
         return graduates;
     }
 }
