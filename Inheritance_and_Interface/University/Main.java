@@ -89,6 +89,7 @@ public class Main {
         //--------------------------------------- Administrator Class ---------------------------------------------//
 
         Administrator Hasan = new Administrator("Hasan Sözer",ozu,"Faculty of Engineering","Computer Science","Computer Engineering Department");
+        Administrator Reha = new Administrator("Reha Civanlar",ozu,"Faculty of Engineering","Computer Science","Faculty of Engineering");
 
         Hasan.addResearchAreas("Software engineering");
         Hasan.addResearchAreas(" software architecture design");
@@ -103,8 +104,36 @@ public class Main {
                 "Turkey. From 2009 until 2011, he worked as a post-doctoral researcher at the University of Twente. \n" +
                 "He has been working as a faculty member at Ozyegin University since 2011.\n");
 
+        Reha.setCV("\n" +
+                "Biography\n" +
+                "Dr. Civanlar is Vice Rector at Ozyegin Univ., Istanbul. He was a VP in DOCOMO USA Labs, Palo Alto, 2006 - 2008, and a visiting Prof. of Computer Engineering at Koc Univ., Istanbul, 2002- 2006. He is on advisory boards of Vidyo Inc., USA and Argela Tech. Inc., Turkey.\n" +
+                "\n" +
+                "Before Koc University, he was head of Visual Comm. Research Dept. at AT&T Labs-Research, where he worked since '91. Prior to that, he was at Pixel Machines Dept. of Bell Labs. His career started in the Center for Comm. and Signal Proc. of NCSU, upon receiving his ECE PhD in 84 from the same university. He received his BS and MS degrees in EE from METU, Turkey.\n" +
+                "\n" +
+                "He has numerous publications, several contributions to international standards, and over forty patents. He is a recipient of 1985 Senior Award of the ASSP. His current research interests include networked video and multimedia with emphasis on the Internet and wireless systems.\n" +
+                "\n" +
+                "Dr. Civanlar is a Fulbright scholar and a member of Sigma Xi. He served as an editor for IEEE Trans. on Comm. and Trans. on Multimedia, JASP and EURASIP Image Comm. He served as a member of MMSP and MDSP TCs of the Sig. Proc. Society. Dr. Civanlar is a fellow of IEEE.");
+
         System.out.println(Hasan);
         System.out.println(Hasan.getCv());
+
+        System.out.println(Reha);
+        System.out.println(Reha.getCv());
+
+        ozu.listOfEmployee();
+
+        //--------------------------------------- Student Class ---------------------------------------------//
+
+        Student Arda = new Student("Arda Erdoğan","S020973","Samsun","Computer Science",2019,ozu);
+        Student Ekin = new Student("Ekin Akan", "S030982","Edirne","Electrical & Electronics Engineering",2019,ozu);
+        Student Selin = new Student("Selin Taneri","S040278","Samsun","Gastronomi",2019,ozu);
+
+        System.out.println(Ekin);
+        System.out.println(Arda);
+        System.out.println(Selin);
+
+        ozu.listOfStudent();
+        System.out.println(ozu);
     }
 
 }

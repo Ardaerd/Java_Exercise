@@ -18,6 +18,18 @@ public class University {
         graduates = new ArrayList<Graduate>();
     }
 
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+
+    public void listOfStudent() {
+        System.out.println("------------ List of Student ------------");
+        for (int i = 0; i < students.size(); i++) {
+            System.out.println(i+1 + "- " + students.get(i).getName() + " (" + students.get(i).getStudentNo() + ")");
+        }
+        System.out.println("---------------------------------------");
+    }
+
     public void addEmployee(Employee employee) {
         employees.add(employee);
     }
@@ -27,11 +39,13 @@ public class University {
         for (int i = 0; i < employees.size(); i++) {
             System.out.println(i+1 + "- " + employees.get(i).getNameOfEmployee());
         }
-        setNameOfUniversity("---------------------------------------");
+        System.out.println("---------------------------------------");
     }
 
     public String toString() {
-        return "Welcome to " + nameOfUniversity;
+        return "Welcome to " + nameOfUniversity + "\n" +
+                "Total Number of Employees: " + employees.size() + "\n" +
+                "Total Number of Students: " + students.size();
     }
 
     public void setNameOfUniversity(String nameOfUniversity) {
