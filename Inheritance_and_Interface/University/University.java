@@ -27,6 +27,7 @@ public class University {
         for (int i = 0; i < employees.size(); i++) {
             System.out.println(i+1 + "- " + employees.get(i).getNameOfEmployee());
         }
+        setNameOfUniversity("---------------------------------------");
     }
 
     public String toString() {

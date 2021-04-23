@@ -1,5 +1,6 @@
 package Inheritance_and_Interface.University;
 
+import Inheritance_and_Interface.University.EmployeePackage.FacultyPackage.Administrator;
 import Inheritance_and_Interface.University.EmployeePackage.FacultyPackage.Teacher;
 
 public class Main {
@@ -9,6 +10,7 @@ public class Main {
         System.out.println(ozu);
         System.out.println(ozu.getNameOfUniversity());
 
+        //--------------------------------------- Teacher Class ---------------------------------------------//
         Teacher Ethem = new Teacher("Ethem Alpaydın",ozu,"Faculty of Engineering","Computer Science");
         Teacher Ismail = new Teacher("Ismail Arı",ozu,"Faculty of Engineering","Computer Science");
         Teacher Reyhan = new Teacher("Reyhan Aydoğan",ozu,"Faculty of Engineering","Computer Science");
@@ -83,6 +85,26 @@ public class Main {
         System.out.println(Ismail.getCv());
         System.out.println(Reyhan);
         System.out.println(Reyhan.getCv());
+
+        //--------------------------------------- Administrator Class ---------------------------------------------//
+
+        Administrator Hasan = new Administrator("Hasan Sözer",ozu,"Faculty of Engineering","Computer Science","Computer Engineering Department");
+
+        Hasan.addResearchAreas("Software engineering");
+        Hasan.addResearchAreas(" software architecture design");
+        Hasan.addResearchAreas("software reliability engineering");
+        Hasan.addResearchAreas("software fault tolerance");
+        Hasan.addResearchAreas("distributed and self-adaptive systems");
+
+        Hasan.setCV("Biography\n" +
+                "Hasan Sözer received his B.Sc. and M.Sc. degrees in computer engineering from Bilkent University, \n" +
+                "Turkey, in 2002 and 2004, respectively. He received his Ph.D. degree in 2009 from the University of \n" +
+                "Twente, The Netherlands. From 2002 until 2005, he worked as a software engineer at Aselsan Inc. in \n" +
+                "Turkey. From 2009 until 2011, he worked as a post-doctoral researcher at the University of Twente. \n" +
+                "He has been working as a faculty member at Ozyegin University since 2011.\n");
+
+        System.out.println(Hasan);
+        System.out.println(Hasan.getCv());
     }
 
 }
