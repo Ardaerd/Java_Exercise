@@ -15,6 +15,6 @@ public class Faculty extends Employee {
 
     public String toString() {
         return super.toString() +
-                super.getNameOfEmployee() + "'s Faculty: " + nameOfFaculty;
+                "Faculty: " + nameOfFaculty;
     }
 }

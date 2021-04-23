@@ -11,15 +11,16 @@ public class Employee {
         this.nameOfEmployee = nameOfEmployee;
         this.status = status;
         this.salary = 2_825.00;
+        this.university = university;
         university.addEmployee(this);
     }
 
     public String toString() {
-        return "------------" + university.getNameOfUniversity() + "------------\n" +
+        return "------------ " + university.getNameOfUniversity() + " -------------\n" +
                 "Rector: " + university.getRector() + "\n" +
-                "Name of Employee: " + nameOfEmployee + "\n" +
-                "Status of " + nameOfEmployee + ": " + status + "\n" +
-                "Salary of " + nameOfEmployee + ": " + salary + "\n";
+                "-------" + nameOfEmployee + "-------\n" +
+                "Status: " + status + "\n" +
+                "Salary: " + salary + "\n";
     }
 
     public void setNameOfEmployee(String nameOfEmployee) {
