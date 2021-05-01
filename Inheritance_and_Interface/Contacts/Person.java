@@ -2,11 +2,13 @@ package Inheritance_and_Interface.Contacts;
 
 public abstract class Person {
     private String name;
+    private String phoneNumber;
     private int yearOfBirth;
     private Address address;
 
-    public Person(String name, int yearOfBirth, Address address) {
+    public Person(String name, String phoneNumber, int yearOfBirth, Address address) {
         this.name = name;
+        this.phoneNumber = phoneNumber;
         this.yearOfBirth = yearOfBirth;
         this.address = address;
     }
@@ -17,6 +19,10 @@ public abstract class Person {
 
     public String toString() {
         return "Person [Name: " + name + ", Year of Birth: " + yearOfBirth + ", Address: " + address + "]";
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public void setName(String name) {
@@ -41,5 +47,9 @@ public abstract class Person {
 
     public Address getAddress() {
         return address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 }
