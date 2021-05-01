@@ -9,7 +9,7 @@ public class Contacts implements Edit{
         boolean checkPerson = people.remove(person);
 
         if (checkPerson)
-            System.out.println(person.getName() + " is deleted.");
+            System.out.println(person.getName() + " is removed.");
         else
             System.out.println(person.getName() + " is not found.");
 
