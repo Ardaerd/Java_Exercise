@@ -1,4 +1,4 @@
-package Inheritance_and_Interface.SIS_System;
+package Inheritance_and_Interface.Contacts;
 
 public abstract class Person {
     private String name;
